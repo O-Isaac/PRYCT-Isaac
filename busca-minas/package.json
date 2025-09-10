@@ -11,10 +11,10 @@
     "lint": "expo lint"
   },
   "dependencies": {
-    "@expo/vector-icons": "^14.1.0",
-    "@react-navigation/bottom-tabs": "^7.3.10",
-    "@react-navigation/elements": "^2.3.8",
-    "@react-navigation/native": "^7.1.6",
+    "@expo/vector-icons": "14.1.0",
+    "@react-navigation/bottom-tabs": "7.3.10",
+    "@react-navigation/elements": "2.3.8",
+    "@react-navigation/native": "7.1.6",
     "expo": "~53.0.22",
     "expo-blur": "~14.1.5",
     "expo-constants": "~17.1.7",
@@ -39,11 +39,15 @@
     "react-native-webview": "13.13.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
+    "@babel/core": "7.25.2",
     "@types/react": "~19.0.10",
     "typescript": "~5.8.3",
-    "eslint": "^9.25.0",
+    "eslint": "9.25.0",
     "eslint-config-expo": "~9.2.0"
   },
-  "private": true
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "pnpm@10.15.1+sha512.34e538c329b5553014ca8e8f4535997f96180a1d0f614339357449935350d924e22f8614682191264ec33d1462ac21561aff97f6bb18065351c162c7e8f6de67"
 }
