@@ -1,6 +1,6 @@
 import { CellProps } from "@/components/game/cell";
 
-// I need cell props into params of the function
+// I need cell props as params of the function
 export function createCell(props: Partial<CellProps>): CellProps {
   return {
     row: props.row ?? 0,
@@ -19,8 +19,8 @@ export function createBoard(height: number, width: number, bombs: number) {
     Array.from({ length: width }, (_, col) => createCell({ row, col }))
   );
 
-  // Aquí deberías añadir la lógica para colocar las bombas aleatoriamente
-  // y calcular los valores de las celdas adyacentes
+  // Here you should add the logic to randomly place bombs
+  // and calculate the values of the adjacent cells
 
   insertBombs(board, bombs);
 
@@ -32,11 +32,11 @@ function updateAdjacentCells(board: Board, bombRow: number, bombCol: number): vo
   const width = board[0].length;
 
   /**
-   * Direcciones de las 8 celdas adyacentes
+   * Directions of the 8 adjacent cells
    *
-   * [-1, -1], [-1, 0], [-1, 1],  // fila superior
-   * [0, -1],           [0, 1],   // fila actual (izquierda y derecha)
-   * [1, -1],  [1, 0],  [1, 1]    // fila inferior
+   * [-1, -1], [-1, 0], [-1, 1],  // top row
+   * [0, -1],           [0, 1],   // current row (left and right)
+   * [1, -1],  [1, 0],  [1, 1]    // bottom row
    */
   const directions = [
     [-1, -1],
@@ -53,10 +53,10 @@ function updateAdjacentCells(board: Board, bombRow: number, bombCol: number): vo
     const newRow = bombRow + rowOffset;
     const newCol = bombCol + colOffset;
 
-    // Verificar que las coordenadas estén dentro del tablero
+    // Check that the coordinates are within the board
     if (newRow >= 0 && newRow < height && newCol >= 0 && newCol < width) {
       const cell = board[newRow][newCol];
-      // Solo incrementar si no es una bomba
+      // Only increment if it is not a bomb
       if (!cell.isBomb) {
         cell.value = (cell.value || 0) + 1;
       }
@@ -64,31 +64,31 @@ function updateAdjacentCells(board: Board, bombRow: number, bombCol: number): vo
   }
 }
 
-// Función para insertar bombas en el tablero
+// Function to insert bombs into the board
 function insertBombs(board: Board, bombs: number): void {
   const height = board.length;
   const width = board[0].length;
   const totalCells = height * width;
 
-  // Verificar que no se pidan más bombas que celdas disponibles
+  // Make sure not to place more bombs than available cells
   if (bombs >= totalCells) {
-    throw new Error("No se pueden colocar más bombas que celdas disponibles");
+    throw new Error("You cannot place more bombs than available cells");
   }
 
   let bombsPlaced = 0;
 
   while (bombsPlaced < bombs) {
-    // Generar coordenadas aleatorias
+    // Generate random coordinates
     const randomRow = Math.floor(Math.random() * height);
     const randomCol = Math.floor(Math.random() * width);
 
-    // Verificar si la celda ya tiene una bomba
+    // Check if the cell already has a bomb
     if (!board[randomRow][randomCol].isBomb) {
-      // Colocar la bomba
+      // Place the bomb
       board[randomRow][randomCol].isBomb = true;
       bombsPlaced++;
 
-      // Incrementar el valor de las celdas adyacentes
+      // Increment the value of adjacent cells
       updateAdjacentCells(board, randomRow, randomCol);
     }
   }
