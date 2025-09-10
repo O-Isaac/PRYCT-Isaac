@@ -24,10 +24,13 @@
                  :~==~==~==~==~~
 ```
 
+> [!NOTE]  
+> Haz click en las imagenes para ir a la web, para ir a mi trello pulsa el badge (imagen) de trello
 
-![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white) ![Android Studio](https://img.shields.io/badge/android%20studio-346ac1?style=for-the-badge&logo=android%20studio&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+[![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)](https://trello.com/invite/b/68c121918a7d2d86bd94001d/ATTI774806f056f3e6d12b84b0cb2c2bbdc485CB7F40/mi-pryct-isaac) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Expo](https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37) ![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
 
 # PRYCT
+
 Este es mi diario de aventura para crear mi propia aplicación/proyecto, espero que sea del agrado quien lo lea.
 
 | Informacion | Informacion |
@@ -35,7 +38,9 @@ Este es mi diario de aventura para crear mi propia aplicación/proyecto, espero 
 | Nombre | Isaac Zaragoza Mendoza |
 | Curso | 2ºDAM |
 | Centro | IES Juan Bosco |
-| Trello | https://trello.com/invite/b/68c121918a7d2d86bd94001d/ATTI774806f056f3e6d12b84b0cb2c2bbdc485CB7F40/mi-pryct-isaac |
 
+## Objetivos
+
+- [ ] Crear un busca minas en expo
 
 <div align="center">Con ❤️ Isaac Zaragoza Mendoza</div>
