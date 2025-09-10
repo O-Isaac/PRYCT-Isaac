@@ -24,7 +24,7 @@ const Row = () => {
 
 export default function HomeScreen() {
   return (
-    <View style={{ height: 100, display: "flex", alignContent: "center"}}>
+    <View style={{ height: 100, display: "flex" }}>
       <Row />
       <Row />
       <Row />
